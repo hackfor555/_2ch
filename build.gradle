@@ -63,6 +63,8 @@ dependencies {
     implementation group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.2.0'
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.2.0'
+    implementation group: 'org.springframework.session', name: 'spring-session-core', version: '3.0.1'
+
 
 
 

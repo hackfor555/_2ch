@@ -1,7 +1,8 @@
 package com.example._2ch.service.impl;
 
 import com.example._2ch.entity.Role;
-import com.example._2ch.entity.User;import com.example._2ch.repository.RoleRepository;
+import com.example._2ch.entity.User;
+import com.example._2ch.repository.RoleRepository;
 import com.example._2ch.repository.UserRepository;
 import com.example._2ch.service.UserService;
 import com.example._2ch.Dto.UserDto;
@@ -24,7 +25,9 @@ public class UserServiceImpl implements UserService {
   @Transactional
   @Override
   public void saveUser(UserDto userDto) {
-    // check if user already exists
+    /*
+    check if user already exists
+     */
     User userExists = userRepository.findByEmail(userDto.getEmail());
     if (userExists != null) {
       throw new RuntimeException("User already exists!");
@@ -39,12 +42,17 @@ public class UserServiceImpl implements UserService {
       throw new RuntimeException("User information is not complete!");
     }
 
+    /*
+    Save user to database
+     */
     User user = new User();
     user.setName(userDto.getFirstName() + " " + userDto.getLastName());
 
     user.setEmail(userDto.getEmail());
     user.setPassword(userDto.getPassword());
-    // encrypt the password using spring security
+    /*
+    encrypt the password using spring security
+     */
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     Role role = roleRepository.findByName("ROLE_ADMIN");
     if (role == null) {

@@ -21,9 +21,11 @@ public class CustomerUserDetailsService implements UserDetailsService {
     this.userRepository = userRepository;
   }
 
-  // This method is named loadUserByUsername for compatibility with the UserDetailsService
-  // interface,
-  // but it actually takes an email as its argument.
+  /*
+   This method is named loadUserByUsername for compatibility with the UserDetailsService
+   interface,
+   but it actually takes an email as its argument.
+   */
   @Override
   public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
     User user = userRepository.findByEmail(email);

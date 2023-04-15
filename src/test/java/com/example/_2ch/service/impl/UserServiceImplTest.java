@@ -1,24 +1,21 @@
-package com.example._2ch.service.impl;import org.junit.jupiter.api.AfterEach;import org.junit.jupiter.api.BeforeEach;import org.junit.jupiter.api.Test;import static org.junit.jupiter.api.Assertions.*;
+package com.example._2ch.service.impl;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import com.example._2ch.Dto.UserDto;
-import com.example._2ch.entity.Role;
 import com.example._2ch.entity.User;
 import com.example._2ch.repository.RoleRepository;
 import com.example._2ch.repository.UserRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.ContextConfiguration;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-//@SpringBootTest(classes = UserServiceImpl.class)
 public class UserServiceImplTest {
   @InjectMocks private UserServiceImpl userService;
 
@@ -37,16 +34,15 @@ public class UserServiceImplTest {
     userDto.setLastName("Doe");
     userDto.setEmail("john.doe@example.com");
     userDto.setPassword("password");
-    //  }@AfterEach
-    //  void tearDown() {
-    //
-    //  }
-  }
+      }
+      @AfterEach
+      void tearDown() {
+      }
 
   @Test
   void saveUser() {
     when(userRepository.findByEmail(userDto.getEmail())).thenReturn(null);
-    //    when(roleRepository.findByName("ROLE_ADMIN")).thenReturn(new Role("ROLE_ADMIN"));
+//        when(roleRepository.findByName("ROLE_ADMIN")).thenReturn(new Role("ROLE_ADMIN"));
     when(passwordEncoder.encode(userDto.getPassword())).thenReturn("encodedPassword");
 
     userService.saveUser(userDto);
