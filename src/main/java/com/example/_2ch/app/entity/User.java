@@ -1,6 +1,5 @@
-package com.example._2ch.entity;
+package com.example._2ch.app.entity;
 
-import com.example._2ch.entity.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

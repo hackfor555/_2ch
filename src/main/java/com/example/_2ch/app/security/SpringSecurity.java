@@ -1,4 +1,4 @@
-package com.example._2ch.security;
+package com.example._2ch.app.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,6 +27,7 @@ public class SpringSecurity {
 						authorize.requestMatchers("/register/**").permitAll()
 								.requestMatchers("/index").permitAll()
 								.requestMatchers("/users").hasRole("ADMIN")
+								.requestMatchers("/*").permitAll()
 				).formLogin(
 						form -> form
 								.loginPage("/login")

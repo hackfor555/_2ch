@@ -1,7 +1,7 @@
-package com.example._2ch.service;
+package com.example._2ch.app.service;
 
-import com.example._2ch.entity.User;
-import com.example._2ch.Dto.UserDto;
+import com.example._2ch.app.entity.User;
+import com.example._2ch.app.Dto.UserDto;
 import java.util.List;
 
 public interface UserService {

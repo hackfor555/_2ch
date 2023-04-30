@@ -1,4 +1,4 @@
-package com.example._2ch.Dto;
+package com.example._2ch.app.Dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

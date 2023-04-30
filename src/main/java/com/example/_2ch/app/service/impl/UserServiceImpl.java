@@ -1,10 +1,10 @@
-package com.example._2ch.service.impl;
+package com.example._2ch.app.service.impl;
 
-import com.example._2ch.entity.Role;
-import com.example._2ch.entity.User;import com.example._2ch.repository.RoleRepository;
-import com.example._2ch.repository.UserRepository;
-import com.example._2ch.service.UserService;
-import com.example._2ch.Dto.UserDto;
+import com.example._2ch.app.entity.Role;
+import com.example._2ch.app.entity.User;import com.example._2ch.app.repository.RoleRepository;
+import com.example._2ch.app.repository.UserRepository;
+import com.example._2ch.app.service.UserService;
+import com.example._2ch.app.Dto.UserDto;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

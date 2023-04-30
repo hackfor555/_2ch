@@ -1,24 +1,21 @@
-package com.example._2ch.service.impl;import org.junit.jupiter.api.AfterEach;import org.junit.jupiter.api.BeforeEach;import org.junit.jupiter.api.Test;import static org.junit.jupiter.api.Assertions.*;
-import com.example._2ch.Dto.UserDto;
-import com.example._2ch.entity.Role;
-import com.example._2ch.entity.User;
-import com.example._2ch.repository.RoleRepository;
-import com.example._2ch.repository.UserRepository;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+package com.example._2ch.service.impl;
+
+import com.example._2ch.app.service.impl.UserServiceImpl;
+import org.junit.jupiter.api.BeforeEach;import org.junit.jupiter.api.Test;
+import com.example._2ch.app.Dto.UserDto;
+import com.example._2ch.app.entity.User;
+import com.example._2ch.app.repository.RoleRepository;
+import com.example._2ch.app.repository.UserRepository;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.ContextConfiguration;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-//@SpringBootTest(classes = UserServiceImpl.class)
 public class UserServiceImplTest {
   @InjectMocks private UserServiceImpl userService;
 
