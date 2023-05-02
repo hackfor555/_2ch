@@ -1,8 +1,8 @@
-package com.example._2ch.controller;
+package com.example._2ch.app.controller;
 
-import com.example._2ch.entity.User;
-import com.example._2ch.service.UserService;
-import com.example._2ch.Dto.UserDto;
+import com.example._2ch.app.entity.User;
+import com.example._2ch.app.service.UserService;
+import com.example._2ch.app.Dto.UserDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,13 +37,16 @@ public class AuthController {
     //handler method to handle user registration form request
     @GetMapping("/register")
     public String showRegistrationForm(Model model){
-        //create model attribute to bind form data
+        /*
+        create model attribute to bind form data
+         */
         UserDto user = new UserDto();
         model.addAttribute("user", user);
         return "register";
     }
-    //handler method to handle user registration form request
-    //handler method to handle user registration form data
+    /*
+    handler method to handle user registration form request and data
+     */
     @PostMapping("/register/save")
     public String registration(@Valid @ModelAttribute("user") UserDto userDto,
                                BindingResult result,
