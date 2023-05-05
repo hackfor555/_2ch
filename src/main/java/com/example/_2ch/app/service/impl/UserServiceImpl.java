@@ -1,10 +1,12 @@
 package com.example._2ch.app.service.impl;
 
+
+import com.example._2ch.app.Dto.UserDto;
 import com.example._2ch.app.entity.Role;
-import com.example._2ch.app.entity.User;import com.example._2ch.app.repository.RoleRepository;
+import com.example._2ch.app.entity.User;
+import com.example._2ch.app.repository.RoleRepository;
 import com.example._2ch.app.repository.UserRepository;
 import com.example._2ch.app.service.UserService;
-import com.example._2ch.app.Dto.UserDto;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -24,7 +26,9 @@ public class UserServiceImpl implements UserService {
   @Transactional
   @Override
   public void saveUser(UserDto userDto) {
-    // check if user already exists
+    /*
+    check if user already exists
+     */
     User userExists = userRepository.findByEmail(userDto.getEmail());
     if (userExists != null) {
       throw new RuntimeException("User already exists!");
@@ -39,12 +43,17 @@ public class UserServiceImpl implements UserService {
       throw new RuntimeException("User information is not complete!");
     }
 
+    /*
+    Save user to database
+     */
     User user = new User();
     user.setName(userDto.getFirstName() + " " + userDto.getLastName());
 
     user.setEmail(userDto.getEmail());
     user.setPassword(userDto.getPassword());
-    // encrypt the password using spring security
+    /*
+    encrypt the password using spring security
+     */
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     Role role = roleRepository.findByName("ROLE_ADMIN");
     if (role == null) {
