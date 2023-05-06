@@ -17,7 +17,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class UserServiceImplTest {
-  @InjectMocks private UserServiceImpl userService;
+  @InjectMocks private com.example._2ch.service.impl.UserServiceImpl userService;
 
   @Mock private UserRepository userRepository;
 
