@@ -1,4 +1,4 @@
-package com.example._2ch.app.service.impl;
+package com.example._2ch.app.service;
 
 import com.example._2ch.app.entity.Role;
 import com.example._2ch.app.entity.User;import com.example._2ch.app.repository.UserRepository;
