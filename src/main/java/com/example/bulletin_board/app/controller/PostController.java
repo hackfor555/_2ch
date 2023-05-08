@@ -1,10 +1,10 @@
-package com.example._2ch.app.controller;
+package com.example.bulletin_board.app.controller;
 
-import com.example._2ch.app.entity.Post;
+import com.example.bulletin_board.app.entity.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import com.example._2ch.app.repository.PostRepository;
+import com.example.bulletin_board.app.repository.PostRepository;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;

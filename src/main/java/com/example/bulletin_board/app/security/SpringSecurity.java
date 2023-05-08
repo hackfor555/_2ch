@@ -1,4 +1,4 @@
-package com.example._2ch.app.security;
+package com.example.bulletin_board.app.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

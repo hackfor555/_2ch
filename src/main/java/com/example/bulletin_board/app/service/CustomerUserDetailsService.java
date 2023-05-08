@@ -1,7 +1,7 @@
-package com.example._2ch.app.service;
+package com.example.bulletin_board.app.service;
 
-import com.example._2ch.app.entity.Role;
-import com.example._2ch.app.entity.User;import com.example._2ch.app.repository.UserRepository;
+import com.example.bulletin_board.app.entity.Role;
+import com.example.bulletin_board.app.entity.User;import com.example.bulletin_board.app.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

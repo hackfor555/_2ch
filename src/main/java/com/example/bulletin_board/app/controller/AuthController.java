@@ -1,8 +1,8 @@
-package com.example._2ch.app.controller;
+package com.example.bulletin_board.app.controller;
 
-import com.example._2ch.app.entity.User;
-import com.example._2ch.app.service.UserService;
-import com.example._2ch.app.Dto.UserDto;
+import com.example.bulletin_board.app.entity.User;
+import com.example.bulletin_board.app.service.UserService;
+import com.example.bulletin_board.app.Dto.UserDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;import org.springf
 @Controller
 public class AuthController {
   @Autowired
-  private UserService userService;
+  private final UserService userService;
 
     public AuthController(UserService userService) {
         this.userService = userService;

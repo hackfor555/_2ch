@@ -1,6 +1,5 @@
-package com.example._2ch;
+package com.example.bulletin_board;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

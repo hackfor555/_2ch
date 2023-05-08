@@ -1,7 +1,8 @@
-package com.example._2ch.app.service;
+package com.example.bulletin_board.app.service;
 
-import com.example._2ch.app.entity.User;
-import com.example._2ch.app.Dto.UserDto;
+import com.example.bulletin_board.app.entity.User;
+import com.example.bulletin_board.app.Dto.UserDto;
+
 import java.util.List;
 
 public interface UserService {
