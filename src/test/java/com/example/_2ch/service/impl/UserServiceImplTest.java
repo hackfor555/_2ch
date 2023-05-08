@@ -1,4 +1,5 @@
 package com.example._2ch.service.impl;
+import com.example._2ch.app.service.UserServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class UserServiceImplTest {
-  @InjectMocks private com.example._2ch.service.impl.UserServiceImpl userService;
+  @InjectMocks private UserServiceImpl userService;
 
   @Mock private UserRepository userRepository;
 
