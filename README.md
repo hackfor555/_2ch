@@ -1,4 +1,4 @@
-# _2ch
+# bulletin_board_spring
 
 This is 2ch like simple bulletin board app.
 You can post texts and can see other's.
