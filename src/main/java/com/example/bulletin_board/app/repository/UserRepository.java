@@ -1,7 +1,8 @@
-package com.example._2ch.app.repository;
+package com.example.bulletin_board.app.repository;
 
+import com.example.bulletin_board.app.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example._2ch.app.entity.User;
+
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByEmail(String email);

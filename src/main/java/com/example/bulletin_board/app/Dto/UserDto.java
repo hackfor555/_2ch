@@ -1,4 +1,4 @@
-package com.example._2ch.app.Dto;
+package com.example.bulletin_board.app.Dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

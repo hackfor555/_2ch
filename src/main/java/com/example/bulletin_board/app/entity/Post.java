@@ -1,9 +1,6 @@
-package com.example._2ch.app.entity;
+package com.example.bulletin_board.app.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
+@Table(name="posts")
 public class Post {
 	/*
 	make post functionality for bulletin board
