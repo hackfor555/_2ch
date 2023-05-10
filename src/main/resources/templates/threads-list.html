@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <title>Threads List</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Threads List</h1>
+
+<div th:if="${message}">
+  <div class="alert alert-success" role="alert" th:text="${message}"></div>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Created At</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="discussionThread : ${threads}">
+    <td th:text="${discussionThread.title}"></td>
+    <td th:text="${discussionThread.createdAt}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<a th:href="@{/api/threads/new}">Create a new discussionThread</a>
+</body>
+</html>
